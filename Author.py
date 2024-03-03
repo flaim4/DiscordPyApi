@@ -17,3 +17,8 @@ class Author:
         response = requests.get(url="https://discord.com/api/v9/users/@me", headers=self.header)
         data = json.loads(response.text)
         return data.get("id")
+    
+    def global_name(self):
+        response = requests.get(url="https://discord.com/api/v9/users/@me", headers=self.header)
+        data = json.loads(response.text)
+        return data.get("global_name")
