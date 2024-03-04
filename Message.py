@@ -38,3 +38,9 @@ class Message:
         respose = requests.delete(url=url, headers=self._header)
         
         return respose.text
+    
+    def get_message_channel(self, channel_id, limit=100):
+        url = f"https://discord.com/api/v9/channels/{channel_id}/messages?limit={limit}"
+        respose = requests.get(url=url, headers=self._header)
+        
+        return respose.text
