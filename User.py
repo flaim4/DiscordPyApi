@@ -97,4 +97,3 @@ class User:
         response = requests.get(url=f"https://discord.com/api/v9/users/{user_id}/profile?with_mutual_guilds=false&with_mutual_friends_count=false", headers=self._header)
         data = json.loads(response.text)
         return data.get("guild_badges")
-    

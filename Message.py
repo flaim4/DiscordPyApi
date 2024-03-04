@@ -32,3 +32,9 @@ class Message:
         response = requests.post(url=url, headers=self._header, data=payload)
 
         return response.text
+    
+    def delate_message_channel(self, channel_id, message_id ):
+        url = f"https://discord.com/api/v9/channels/{channel_id}/messages/{message_id}"
+        respose = requests.delete(url=url, headers=self._header)
+        
+        return respose.text
