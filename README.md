@@ -1,3 +1,3 @@
 # DiscordPyApi
 
-> Это библиотека на языке Python, предоставляющая простого клиента для взаимодействия с Discord API.
+> It is a Python library that provides a simple client for interacting with the Discord API.
